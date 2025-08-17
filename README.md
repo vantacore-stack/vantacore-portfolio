@@ -1,4 +1,4 @@
-# 🚀 VantaCore.ID – Web3 Portfolio  
+# VantaCore.ID – Web3 Portfolio  
 *A sleek, animated portfolio built with pure HTML/CSS/JS and deployed via GitHub Pages.*
 
 ---
