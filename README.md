@@ -16,7 +16,7 @@ Live: https://vantacore-stack.github.io/vantacore-portfolio/
 | Tahap | Alat / Langkah |
 |-------|----------------|
 | **Koding** | HTML5 + CSS3 (neon, @keyframes) + Vanilla JS |
-| **Editor** | nano di Termux |
+| **Editor** | nano  |
 | **Repo** | `gh repo create vanta-pro --public --source=. --push` |
 | **Deploy** | GitHub Pages branch `main` / root (Settings → Pages) |
 | **Update** | `git add . && git commit -m "update" && git push` |
