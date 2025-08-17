@@ -36,9 +36,9 @@ Ultra-lightweight single-file portfolio built with **HTML + CSS + JS** and deplo
 ---
 
 ## 📧 Kontak
-**hello@vantacore.id**
+**vantacore.id@gmail.com**
 
 ---
 
 ## 📄 Lisensi
-MIT © 2025 vantacore.id@gmail.com
+MIT © 2025 vantacore.id
