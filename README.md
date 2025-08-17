@@ -1,5 +1,13 @@
-# 🚀 VantaCore.ID – Web3 Portfolio  
-Ultra-lightweight single-file portfolio built with **HTML + CSS + JS** and deployed via **GitHub Pages**.
+# VantaCore.ID – Web3 Portfolio
+Live: https://vantacore-stack.github.io/vantacore-portfolio/
+
+---
+
+## Cara Pakai
+1. Clone repo  
+   ```bash
+   git clone https://github.com/vantacore-stack/vantacore-portfolio.git
+   cd vantacore-portfolio
 
 ---
 
