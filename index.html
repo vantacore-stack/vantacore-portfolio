@@ -2,107 +2,35 @@
 <html lang="id">
 <head>
   <meta charset="utf-8"/>
-  <title>VantaCore.ID – Web3 Portfolio</title>
+  <title>Projects – VantaCore.ID</title>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-
-  <!-- Inter font (Google) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
   <style>
-    :root{
-      --bg:#000;
-      --bg2:#111;
-      --fg:#fff;
-      --accent:#fff;   /* tetap putih untuk tema monochrome */
+    /* tambahan khusus projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Inter',sans-serif;
-      background:var(--bg);
-      color:var(--fg);
-      line-height:1.6;
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
+    .project-card {
+      background: var(--bg2);
+      border: 1px solid #222;
+      border-radius: var(--radius,12px);
+      padding: 2rem;
+      transition: transform .35s, box-shadow .35s;
     }
-
-    /* NAVBAR */
-    nav{
-      position:fixed;top:0;left:0;right:0;
-      background:rgba(0,0,0,.7);backdrop-filter:blur(8px);
-      display:flex;align-items:center;justify-content:space-between;
-      padding:.8rem 1rem;
-      z-index:1000;
-      animation:fadeDown .8s both;
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(255,255,255,.12);
     }
-    nav .brand{font-weight:700;font-size:1.2rem;letter-spacing:.05em}
-    nav a{color:var(--fg);margin-left:1rem;text-decoration:none;font-weight:500;transition:.3s}
-    nav a:hover{opacity:.6}
-
-    /* HERO */
-    header{
-      flex:1;
-      display:flex;flex-direction:column;align-items:center;justify-content:center;
-      text-align:center;padding:2rem;
+    .project-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: .5rem;
     }
-    header h1{
-      font-size:clamp(2rem,7vw,4rem);
-      font-weight:700;
-      animation:glow 2s ease-in-out infinite alternate;
-    }
-    header p{
-      font-size:clamp(.9rem,2.5vw,1.3rem);
-      font-weight:300;
-      margin:.5rem 0 1.5rem;
-      opacity:.8;
-    }
-    .btn{
-      background:var(--fg);color:var(--bg);
-      padding:.9rem 2rem;border:none;border-radius:50px;
-      font-weight:600;cursor:pointer;transition:.3s;
-    }
-    .btn:hover{transform:scale(1.05) translateY(-2px);box-shadow:0 0 20px rgba(255,255,255,.25)}
-
-    /* SECTIONS */
-    section{
-      max-width:900px;margin:auto;padding:4rem 1.2rem;
-      opacity:0;transform:translateY(30px);
-      transition:opacity .8s ease,transform .8s ease;
-    }
-    section.show{opacity:1;transform:none}
-    section h2{
-      font-size:2rem;font-weight:600;margin-bottom:1rem;
-      position:relative
-    }
-    section h2::after{
-      content:"";width:40px;height:3px;background:var(--fg);
-      display:block;margin:.4rem 0;
-    }
-
-    /* CARDS */
-    .cards{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:1.5rem;margin-top:1.5rem;
-    }
-    .card{
-      background:var(--bg2);border:1px solid #222;border-radius:12px;
-      padding:1.8rem;transition:.3s;
-    }
-    .card:hover{transform:translateY(-8px);box-shadow:0 0 25px rgba(255,255,255,.1)}
-
-    /* FOOTER */
-    footer{
-      text-align:center;padding:2rem 1rem;font-size:.9rem;opacity:.6;
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:0}}
-    @keyframes glow{from{text-shadow:0 0 5px #fff}to{text-shadow:0 0 15px #fff,0 0 25px #fff}}
-
-    /* RESPONSIVE */
-    @media(max-width:600px){
-      nav{flex-direction:column}
+    .project-card p {
+      opacity: .7;
     }
   </style>
 </head>
@@ -111,45 +39,41 @@
   <nav>
     <span class="brand">VantaCore.ID</span>
     <div>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
+      <a href="index.html">Home</a>
       <a href="#contact">Contact</a>
     </div>
-  </nav>
+  </nav><a href="projects.html">Projects</a>
 
-  <header>
-    <h1>VantaCore.ID</h1>
-    <p>Web3 Developer & Blockchain Craftsman</p>
-    <button class="btn" onclick="location.href='#projects'">Explore</button>
+
+  <header style="padding-top: 6rem; text-align:center;">
+    <h1>Projects</h1>
+    <p>Smart-contract playground & dApps built on Android via Termux</p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Self-taught builder focused on DeFi, NFTs & smart-contract security. Solidity, Next.js, IPFS — all in.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="cards">
-      <div class="card"><h3>DeFi Dashboard</h3><p>Real-time portfolio analytics on Ethereum.</p></div>
-      <div class="card"><h3>NFT Minter</h3><p>Gas-optimized ERC-721 minting dApp.</p></div>
-      <div class="card"><h3>Token Swap UI</h3><p>Powered by Uniswap SDK & flash-loans.</p></div>
+  <main class="projects-grid reveal">
+    <!-- DeFi Dashboard -->
+    <div class="project-card">
+      <h3>DeFi Dashboard</h3>
+      <p>Real-time portfolio analytics on Ethereum. Track LP positions, yield farming, gas usage & more in one sleek interface.</p>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>hello@vantacore.id</p>
-  </section>
+    <!-- NFT Minter -->
+    <div class="project-card">
+      <h3>NFT Minter</h3>
+      <p>Gas-optimized ERC-721 minting dApp. Upload to IPFS, set royalties, and deploy contracts with a single click.</p>
+    </div>
 
-  <footer>&copy; 2025 VantaCore.ID</footer>
+    <!-- Token Swap UI -->
+    <div class="project-card">
+      <h3>Token Swap UI</h3>
+      <p>Powered by Uniswap SDK & flash-loans. Swap any ERC-20 with best route, slippage guard, and MEV-resistant mode.</p>
+    </div>
+  </main>
 
-  <!-- smooth reveal on scroll -->
-  <script>
-    const io=new IntersectionObserver(e=>{
-      e.forEach(el=>el.target.classList.toggle('show',el.isIntersecting))
-    },{threshold:.2});
-    document.querySelectorAll('section').forEach(s=>io.observe(s));
-  </script>
+  <footer>
+    &copy; <span id="year"></span> VantaCore.ID
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
